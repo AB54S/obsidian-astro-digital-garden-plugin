@@ -1,27 +1,37 @@
 {
 	"name": "digital-garden-plugin",
 	"version": "1.0.0",
-	"description": "Digital Garden within Obsidian",
+	"description": "Publish Obsidian notes to an Astro digital garden blog",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"test": "vitest run",
+		"test:watch": "vitest"
 	},
-	"keywords": [],
+	"keywords": [
+		"obsidian",
+		"plugin",
+		"digital-garden",
+		"astro",
+		"blog",
+		"publishing"
+	],
 	"license": "0-BSD",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
+		"@eslint/js": "9.30.1",
+		"@types/node": "^20.0.0",
 		"esbuild": "0.25.5",
 		"eslint-plugin-obsidianmd": "0.1.9",
 		"globals": "14.0.0",
+		"jiti": "2.6.1",
 		"tslib": "2.4.0",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "8.35.1",
-		"@eslint/js": "9.30.1",
-		"jiti": "2.6.1"
+		"vitest": "^3.0.0"
 	},
 	"dependencies": {
 		"obsidian": "latest"
